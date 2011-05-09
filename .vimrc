@@ -56,7 +56,7 @@ imap <silent> <C-j> <C-O>:m+<CR><C-O>
 imap <silent> <C-k> <C-O>:m-2<CR><C-O>
 
 map <C-\> :NERDTreeFind<CR>
-map <C-n> :FufFile **/<CR>
+map <C-n> :FufFileWithCurrentBufferDir **/<CR>
 map <C-e> :MRU<CR>
 map <F2> :NERDTreeToggle<CR>
 
