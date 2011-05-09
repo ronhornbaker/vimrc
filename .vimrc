@@ -109,7 +109,7 @@ set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l/%L\ (%p%%)]
 if has('gui_running')
   colorscheme ir_black_ron
 else
-  colorscheme ir_black_ron
+  colorscheme desert
 endif 
 
 "misc
