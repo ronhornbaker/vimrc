@@ -60,7 +60,7 @@ imap <silent> <C-j> <C-O>:m+<CR><C-O>
 imap <silent> <C-k> <C-O>:m-2<CR><C-O>
 
 map <C-\> :NERDTreeFind<CR>
-map <C-n> :FufFileWithCurrentBufferDir **/<CR>
+map <C-n> :FufFileWithCurrentBufferDir <CR>
 map <C-e> :MRU<CR>
 map <F2> :NERDTreeToggle<CR>
 
@@ -107,9 +107,9 @@ set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l/%L\ (%p%%)]
 
 "use different colorscheme for mac vim and console vim
 if has('gui_running')
-  colorscheme ir_black
+  colorscheme ir_black_ron
 else
-  colorscheme ir_black
+  colorscheme ir_black_ron
 endif 
 
 "misc
