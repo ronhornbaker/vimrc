@@ -58,6 +58,7 @@ imap <silent> <C-k> <C-O>:m-2<CR><C-O>
 map <C-\> :NERDTreeFind<CR>
 map <C-n> :FufFile **/<CR>
 map <C-e> :MRU<CR>
+map <F2> :NERDTreeToggle<CR>
 
 " backwards-kill-word idea cribbed from Steve Yegge
 " hit CTRL-h (insert and normal mode) to delete the word
