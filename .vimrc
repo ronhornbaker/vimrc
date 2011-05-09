@@ -60,9 +60,12 @@ imap <silent> <C-j> <C-O>:m+<CR><C-O>
 imap <silent> <C-k> <C-O>:m-2<CR><C-O>
 
 map <C-\> :NERDTreeFind<CR>
-map <C-n> :FufFileWithCurrentBufferDir <CR>
+map <C-n> :FufFileWithFullCwd<CR>
 map <C-e> :MRU<CR>
 map <F2> :NERDTreeToggle<CR>
+
+" change working directory to current file's location by typing \cd
+map <leader>cd :cd %:p:h<CR>
 
 " backwards-kill-word idea cribbed from Steve Yegge
 " hit CTRL-h (insert and normal mode) to delete the word
