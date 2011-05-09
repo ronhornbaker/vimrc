@@ -16,6 +16,10 @@ set shiftround
 set expandtab
 set smarttab
 
+" maximize window
+set lines=999
+set columns=999
+
 " use syntax highlighting
 filetype on
 syntax enable
