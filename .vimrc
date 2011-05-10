@@ -64,6 +64,9 @@ map <C-n> :FufFileWithFullCwd<CR>
 map <C-e> :MRU<CR>
 map <F2> :NERDTreeToggle<CR>
 
+" quick access to NERDTree bookmarks
+map <C-b> :NERDTreeFind<CR>:OpenBookmark 
+
 " change working directory to current file's location by typing \cd
 map <leader>cd :cd %:p:h<CR>
 
@@ -128,3 +131,39 @@ endif
 "sunmap w
 "sunmap b
 "sunmap e
+
+" custom grep function, modified from http://amix.dk/blog/post/175
+function! G(search_term)
+  "if a:search_term == null
+  "  echo "Usage: G <options> <pattern> <dir>"
+  "  echo 'Example: G -r "cow" ~/Desktop/*'
+  "  return
+  let options = '-rsinI --exclude=*.{png,jpg,gif,log}'
+  let pattern = a:search_term
+  let dir = '*'
+  let exclude = 'grep -v "^[^:]*\.svn/.*:"'
+  let cmd = 'grep '.options.' '.pattern.' '.dir. '| '.exclude
+  let cmd_output = system(cmd)
+  if cmd_output == ""
+    echomsg "Pattern " . pattern . " not found"
+    return
+  endif
+
+  let tmpfile = tempname()
+  exe "redir! > " . tmpfile
+  silent echon '[grep search for "'.pattern.'" with options "'.options.'"]'."\n"
+  silent echon cmd_output
+  redir END
+
+  let old_efm = &efm
+  set efm=%f:%\\s%#%l:%m
+
+  execute "silent! cgetfile " . tmpfile
+  let &efm = old_efm
+  botright copen
+
+  call delete(tmpfile)
+endfunction
+command! -nargs=* -complete=file G call G(<f-args>)
+
+
