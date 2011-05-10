@@ -1,1 +1,9 @@
-This is my .vim directory and my .vimrc
+This is my .vim directory and my .vimrc file.
+
+I'm a Rails hacker, and work on Macs mostly. My editor of choice was formerly RubyMine, but I've made the switch to MacVim thanks to this config. This setup works well in Terminal, too.
+
+I map my Caps Lock key to Control (using the OS) to minimize the pinky finger work.
+
+My basic workflow is 1) open MacVim, 2) :cd project/directory, 3) :NERDTree. To open a second project, I Cmd-T to open a new tab, then repeat steps 2) and 3).
+
+I make heavy use of commands \be (buffer explorer to switch between opened files), Ctrl-g (to open the custom grep function in a project), and Ctrl-n (to open the Fuzzy Finder for files). 
