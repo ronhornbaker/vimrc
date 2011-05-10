@@ -133,16 +133,12 @@ endif
 "sunmap e
 
 " custom grep function, modified from http://amix.dk/blog/post/175
-function! G(search_term)
-  "if a:search_term == null
-  "  echo "Usage: G <options> <pattern> <dir>"
-  "  echo 'Example: G -r "cow" ~/Desktop/*'
-  "  return
-  let options = '-rsinI --exclude=*.{png,jpg,gif,log}'
-  let pattern = a:search_term
+function! G(...)
+  let options = '-rsinI --exclude={.svn*,.svn/*,*.{png,jpg,gif,log,ai,psd,eps}}'
+  let pattern = join(a:000," ")
   let dir = '*'
   let exclude = 'grep -v "^[^:]*\.svn/.*:"'
-  let cmd = 'grep '.options.' '.pattern.' '.dir. '| '.exclude
+  let cmd = 'grep '.options.' "'.pattern.'" '.dir. '| '.exclude
   let cmd_output = system(cmd)
   if cmd_output == ""
     echomsg "Pattern " . pattern . " not found"
