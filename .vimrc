@@ -63,6 +63,7 @@ map <C-\> :NERDTreeFind<CR>
 map <C-n> :FufFileWithFullCwd<CR>
 map <C-e> :MRU<CR>
 map <F2> :NERDTreeToggle<CR>
+map <C-g> :G 
 
 " quick access to NERDTree bookmarks
 map <C-b> :NERDTreeFind<CR>:OpenBookmark 
