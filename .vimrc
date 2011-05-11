@@ -63,10 +63,10 @@ map <C-\> :NERDTreeFind<CR>
 map <C-n> :FufFileWithFullCwd<CR>
 map <C-e> :MRU<CR>
 map <F2> :NERDTreeToggle<CR>
-map <C-g> :G 
+map <C-g> :G
 
 " quick access to NERDTree bookmarks
-map <C-b> :NERDTreeFind<CR>:OpenBookmark 
+map <F3> :NERDTreeFind<CR>:OpenBookmark 
 
 " change working directory to current file's location by typing \cd
 map <leader>cd :cd %:p:h<CR>
