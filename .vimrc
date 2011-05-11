@@ -15,6 +15,7 @@ set shiftwidth=2
 set shiftround
 set expandtab
 set smarttab
+set cursorline
 
 " maximize window
 set lines=999
