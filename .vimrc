@@ -17,6 +17,9 @@ set expandtab
 set smarttab
 set cursorline
 
+"re-map <leader> from \ to , (comma) to avoid having to reach with right pinky
+let mapleader = ","
+
 " maximize window
 set lines=999
 set columns=999
