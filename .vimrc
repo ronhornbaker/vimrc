@@ -20,7 +20,6 @@ set cursorline
 "re-map <leader> from \ to , (comma) to avoid having to reach with right pinky
 let mapleader = ","
 
-" maximize window
 set lines=999
 set columns=999
 
@@ -70,8 +69,9 @@ map <F2> :NERDTreeToggle<CR>
 map <C-g> :G
 
 " CTRL-s to save file from both normal and insert modes
-map <C-s> :w<CR>
-imap <C-s> <ESC> :w<CR>
+" (doesn't work from Terminal for some reason)
+map! <C-s> <ESC>:w<CR>
+nmap <C-s> :w<CR>
 
 " quick access to NERDTree bookmarks
 map <F3> :NERDTreeFind<CR>:OpenBookmark 
@@ -92,6 +92,11 @@ map! <silent> <C-u> <Esc>u
 
 " hit F1 to toggle match highlighting
 map <F1> :set invhlsearch<CR>
+
+" map CTRL-, to ESC (easier to reach than ESC or CTRL-[)
+" (can't seem to make it work)
+"map! <silent> <C-,> <Esc> 
+"map  <silent> <C-,> <Esc> 
 
 " linux friendly: paste the current X selection on middle mouse button
 " map <S-Insert> <MiddleMouse>
@@ -171,4 +176,12 @@ function! G(...)
 endfunction
 command! -nargs=* -complete=file G call G(<f-args>)
 
+function! ToggleScratch()
+  if expand('%') == g:ScratchBufferName
+    quit
+  else
+    Sscratch
+  endif
+endfunction
+map <leader>s :call ToggleScratch()<CR>
 
