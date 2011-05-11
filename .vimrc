@@ -69,6 +69,10 @@ map <C-e> :MRU<CR>
 map <F2> :NERDTreeToggle<CR>
 map <C-g> :G
 
+" CTRL-s to save file from both normal and insert modes
+map <C-s> :w<CR>
+imap <C-s> <ESC> :w<CR>
+
 " quick access to NERDTree bookmarks
 map <F3> :NERDTreeFind<CR>:OpenBookmark 
 
