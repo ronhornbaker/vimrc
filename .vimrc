@@ -125,9 +125,9 @@ map <F1> :set invhlsearch<CR>
 set ruler
 set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l/%L\ (%p%%)]
 
-"use different colorscheme for mac vim and console vim
+"use different colorscheme for macvim and console vim
 if has('gui_running')
-  colorscheme ir_black_ron
+  colorscheme morning
 else
   colorscheme desert
 endif 
