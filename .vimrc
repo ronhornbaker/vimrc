@@ -38,8 +38,7 @@ filetype indent on
 " misc options
 set matchpairs+=<:>  " bounce matching angle brackets on %
 set hidden           " don't kill buffers, just hide them
-set incsearch        " incrementally search (firefox does this too)
-set ignorecase       " ignore capitalization when searching
+set smartcase       " ignore capitalization when searching, unless input contains uppercase
 set scrolloff=3      " scroll the screen to keep the cursor more than 5 lines in
 set showbreak=\      " display wrapped lines with a leading '\'
 set breakat-=-       " allow wrapping words at '-'
@@ -185,3 +184,5 @@ function! ToggleScratch()
 endfunction
 map <leader>s :call ToggleScratch()<CR>
 
+
+TPluginBefore \<tcomment_vim[\/]autoload[\/] TPlugin tcomment_vim
