@@ -7,7 +7,7 @@ set incsearch
 " highlight search hits
 set hlsearch
 
-" tab policy: spaces only, 4 per indentation level
+" tab policy: spaces only, 2 per indentation level
 " use language-sensitive indentation where available
 " use :retab to fix nonconforming files
 set tabstop=2
@@ -20,6 +20,7 @@ set cursorline
 "re-map <leader> from \ to , (comma) to avoid having to reach with right pinky
 let mapleader = ","
 
+" open window maximized
 set lines=999
 set columns=999
 
@@ -91,58 +92,20 @@ map! <silent> <C-u> <Esc>u
 " hit F1 to toggle match highlighting
 map <F1> :set invhlsearch<CR>
 
-" map CTRL-, to ESC (easier to reach than ESC or CTRL-[)
-" (can't seem to make it work)
-"map! <silent> <C-,> <Esc> 
-"map  <silent> <C-,> <Esc> 
-
-" linux friendly: paste the current X selection on middle mouse button
-" map <S-Insert> <MiddleMouse>
-" map! <S-Insert> <MiddleMouse>
-
-" ************* Load Plugins *****************
-" start matchit
-"source $VIMRUNTIME/macros/matchit.vim
-
-" Toggle the TagList
-"nnoremap <silent> <F8> :TlistToggle<CR>
-"let Tlist_GainFocus_On_ToggleOpen = 1
-"let Tlist_Exit_OnlyWindow = 1
-"let Tlist_Use_SingleClick = 1
-"let Tlist_Process_File_Always = 1
-
-" Toggle BufExplorer
-"map <F9> \bs
-"let g:bufExplorerShowDirectories=0   " Don't show directories.
-"let g:bufExplorerSplitBelow=1        " Split new window below current
-"let g:bufExplorerSplitHorzSize=0     " Use this many lines for the window
-"let g:bufExplorerUseCurrentWindow=1  " Open using current window
-
-  
 "visual stuff
 set ruler
 set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l/%L\ (%p%%)]
 
-"use different colorscheme for macvim and console vim
+"use different colorscheme for macvim and console vim, and open to fullscreen if macvim
 if has('gui_running')
   colorscheme morning
 else
   colorscheme desert
 endif 
 
-"misc
-
 "fix grep
 :let Grep_Find_Use_Xargs = 0
 :let Grep_Default_Filelist = '*.rb'
-
-"map camelcasemotion replacements to w,b,e so they are camelcase and _ aware
-"map <silent> w <Plug>CamelCaseMotion_w
-"map <silent> b <Plug>CamelCaseMotion_b
-"map <silent> e <Plug>CamelCaseMotion_e
-"sunmap w
-"sunmap b
-"sunmap e
 
 " custom grep function, modified from http://amix.dk/blog/post/175
 function! G(...)
@@ -183,5 +146,3 @@ function! ToggleScratch()
 endfunction
 map <leader>s :call ToggleScratch()<CR>
 
-
-TPluginBefore \<tcomment_vim[\/]autoload[\/] TPlugin tcomment_vim
