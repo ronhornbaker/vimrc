@@ -44,7 +44,6 @@ set showbreak=\      " display wrapped lines with a leading '\'
 set breakat-=-       " allow wrapping words at '-'
 set linebreak        " allow word wrapping
 set showmatch        " jump to previous closing brace/bracket when closing a block
-set smartcase
 set bufhidden=hide
 source ~/.vim/autotag.vim
 
