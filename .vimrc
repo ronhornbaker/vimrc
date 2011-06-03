@@ -99,9 +99,9 @@ set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l/%L\ (%p%%)]
 
 "use different colorscheme for macvim and console vim
 if has('gui_running')
-  colorscheme morning
+  colorscheme hornbaker
 else
-  colorscheme desert
+  colorscheme hornbaker
 endif 
 
 "fix grep
