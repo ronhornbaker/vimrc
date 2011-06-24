@@ -79,6 +79,9 @@ map <F3> :NERDTreeFind<CR>:OpenBookmark
 " change working directory to current file's location by typing \cd
 map <leader>cd :cd %:p:h<CR>
 
+" toggle to previous file in buffer
+map <leader>j ,bej<CR>
+
 " backwards-kill-word idea cribbed from Steve Yegge
 " hit CTRL-h (insert and normal mode) to delete the word
 " you are currently typing. It's faster than backspacing.
