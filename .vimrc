@@ -68,6 +68,9 @@ map <C-e> :MRU<CR>
 map <F2> :NERDTreeToggle<CR>
 map <C-g> :G
 
+" shortcut to applescript that refreshes browser page in browser(s)
+map <leader>r :execute "!open /Users/Ron/code/applescripts/refresh_firefox.app"<CR><CR>
+
 " CTRL-s to save file from both normal and insert modes
 " (doesn't work from Terminal for some reason)
 map! <C-s> <ESC>:w<CR>
