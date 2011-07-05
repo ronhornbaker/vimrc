@@ -67,9 +67,11 @@ map <C-n> :FufFileWithFullCwd<CR>
 map <C-e> :MRU<CR>
 map <F2> :NERDTreeToggle<CR>
 map <C-g> :G
+" map shortcut to Rails view <-> controller toggle
+map <C-a> :R<CR>
 
 " shortcut to applescript that refreshes browser page in browser(s)
-map <leader>r :execute "!open /Users/Ron/code/applescripts/refresh_firefox.app"<CR><CR>
+map <leader>r :execute "!open /Users/Ron/code/vimrc/refresh_browser.app"<CR><CR>
 
 " CTRL-s to save file from both normal and insert modes
 " (doesn't work from Terminal for some reason)
