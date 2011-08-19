@@ -11,7 +11,7 @@ if exists("syntax_on")
 endif
 let g:colors_name = "hornbaker"
 
-hi Comment term=bold ctermfg=Gray guifg=Gray
+hi Comment term=bold ctermfg=DarkGray guifg=#666666
 hi Normal guifg=black guibg=white
 hi Constant term=underline ctermfg=Magenta guifg=Magenta
 hi Special term=bold ctermfg=Magenta guifg=Magenta
