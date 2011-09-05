@@ -62,8 +62,8 @@ nmap <silent> <C-k> :m-2<CR>
 imap <silent> <C-j> <C-O>:m+<CR><C-O>
 imap <silent> <C-k> <C-O>:m-2<CR><C-O>
 
-map <C-\> :NERDTreeFind<CR>
-map <C-n> :FufFileWithFullCwd<CR>
+map <leader>m :NERDTreeFind<CR>
+map <leader>f :FufFileWithFullCwd **/<CR>
 map <C-e> :MRU<CR>
 map <F2> :NERDTreeToggle<CR>
 map <C-g> :G
