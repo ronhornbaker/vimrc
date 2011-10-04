@@ -21,11 +21,13 @@ set cursorline
 let mapleader = ","
 
 " open window maximized
-set lines=999
-set columns=999
+" set lines=999
+" set columns=999
 
 " use syntax highlighting
 filetype on
+filetype plugin on
+filetype detect on
 syntax enable
 
 " use auto-indentation
