@@ -27,7 +27,6 @@ let mapleader = ","
 " use syntax highlighting
 filetype on
 filetype plugin on
-filetype detect on
 syntax enable
 
 " use auto-indentation
@@ -111,7 +110,7 @@ set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l/%L\ (%p%%)]
 if has('gui_running')
   colorscheme hornbaker
 else
-  colorscheme hornbaker
+  colorscheme vividchalk
 endif 
 
 "fix grep
