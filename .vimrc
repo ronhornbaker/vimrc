@@ -89,7 +89,7 @@ map <F3> :NERDTreeFind<CR>:OpenBookmark
 map <leader>cd :cd %:p:h<CR>
 
 " toggle to previous file in buffer
-map <leader>j ,bej<CR>
+map <leader>j <C-^>
 
 " backwards-kill-word idea cribbed from Steve Yegge
 " hit CTRL-h (insert and normal mode) to delete the word
@@ -160,4 +160,14 @@ function! ToggleScratch()
   endif
 endfunction
 map <leader>s :call ToggleScratch()<CR>
+
+" use Ctrl+L to toggle the line number counting method
+function! g:ToggleNuMode()
+      if(&rnu == 1)
+        set nu
+  else
+    set rnu
+  endif
+endfunc
+nnoremap <C-L> :call g:ToggleNuMode()<cr>
 
