@@ -163,8 +163,8 @@ map <leader>s :call ToggleScratch()<CR>
 
 " use Ctrl+L to toggle the line number counting method
 function! g:ToggleNuMode()
-      if(&rnu == 1)
-        set nu
+  if(&rnu == 1)
+    set nu
   else
     set rnu
   endif
