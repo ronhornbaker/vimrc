@@ -171,3 +171,8 @@ function! g:ToggleNuMode()
 endfunc
 nnoremap <C-L> :call g:ToggleNuMode()<cr>
 
+" see http://robots.thoughtbot.com/post/27041742805/vim-you-complete-me
+imap <Tab> <C-P>
+set complete=.,b,u,]
+set wildmode=longest,list:longest
+set completeopt=menu,preview
