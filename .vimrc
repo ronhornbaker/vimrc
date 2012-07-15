@@ -176,3 +176,10 @@ imap <Tab> <C-P>
 set complete=.,b,u,]
 set wildmode=longest,list:longest
 set completeopt=menu,preview
+
+" see http://ksjoberg.com/vim-esckeys.html
+:set timeout timeoutlen=1000 ttimeoutlen=100
+" escape from insert mode faster
+imap kj <esc>
+imap KJ <esc>
+
