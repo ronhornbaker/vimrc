@@ -183,3 +183,6 @@ set completeopt=menu,preview
 imap kj <esc>
 imap KJ <esc>
 
+" move those annoying *.swp files somewhere else
+:set dir=/tmp
+
