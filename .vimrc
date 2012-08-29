@@ -79,8 +79,9 @@ map <leader>r :execute "!open /Users/Ron/code/vimrc/refresh_browser.app"<CR><CR>
 
 " CTRL-s to save file from both normal and insert modes
 " (doesn't work from Terminal for some reason)
-map! <C-s> <ESC>:w<CR>
 nmap <C-s> :w<CR>
+imap <C-s> <ESC>:w<CR>
+
 
 " quick access to NERDTree bookmarks
 map <F3> :NERDTreeFind<CR>:OpenBookmark 
@@ -185,4 +186,9 @@ imap KJ <esc>
 
 " move those annoying *.swp files somewhere else
 :set dir=/tmp
+
+" set synmaxcol=128
+set ttyfast " u got a fast terminal
+set ttyscroll=5
+set lazyredraw " to avoid scrolling problems
 
